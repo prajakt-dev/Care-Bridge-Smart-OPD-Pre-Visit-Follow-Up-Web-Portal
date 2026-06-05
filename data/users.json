@@ -1,0 +1,44 @@
+[
+  {
+    "id": "USR-1001",
+    "role": "patient",
+    "name": "Prajakt Patil",
+    "mobile": "9876543210",
+    "email": "prajakt@example.com",
+    "password": "carebridge",
+    "profileImage": "assets/patient-avatar.svg",
+    "age": 21,
+    "gender": "Male",
+    "dob": "2005-02-12",
+    "bloodGroup": "O+",
+    "height": "172 cm",
+    "weight": "68 kg",
+    "address": "Pune, Maharashtra",
+    "emergencyContact": "9876500000",
+    "insuranceId": "CB-INS-2045",
+    "allergies": "None",
+    "knownDiseases": [
+      "None"
+    ]
+  },
+  {
+    "id": "DOC-1001",
+    "role": "doctor",
+    "doctorId": "DOC-1001",
+    "name": "Aarav Kulkarni",
+    "department": "General Medicine",
+    "password": "doctorcare"
+  },
+  {
+    "id": "USR-1780218801376",
+    "role": "patient",
+    "name": "Prajakt Wele",
+    "mobile": "8459488676",
+    "email": "prajaktwele@gmail.com",
+    "password": "Prajakt123$",
+    "age": null,
+    "gender": "",
+    "bloodGroup": "",
+    "knownDiseases": []
+  }
+]

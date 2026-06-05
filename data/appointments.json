@@ -1,0 +1,87 @@
+[
+  {
+    "id": "APT-1780295438198",
+    "patientId": "USR-1001",
+    "patientName": "Prajakt Patil",
+    "age": "21",
+    "gender": "Male",
+    "bloodGroup": "O+",
+    "height": "172 cm",
+    "weight": "68 kg",
+    "department": "General Medicine",
+    "date": "2026-06-15",
+    "dateLabel": "2026-06-15",
+    "time": "11:00",
+    "symptoms": [],
+    "severity": 1,
+    "status": "draft"
+  },
+  {
+    "id": "APT-1780218998048",
+    "patientId": "USR-1780218801376",
+    "patientName": "Prajakt Patil",
+    "age": "21",
+    "gender": "Male",
+    "bloodGroup": "O+",
+    "height": "172 cm",
+    "weight": "68 kg",
+    "department": "General Medicine",
+    "date": "2026-06-15",
+    "dateLabel": "2026-06-15",
+    "time": "11:00",
+    "symptoms": [],
+    "severity": 1,
+    "status": "draft"
+  },
+  {
+    "id": "APT-1001",
+    "patientId": "USR-1001",
+    "patientName": "Prajakt Patil",
+    "age": 21,
+    "gender": "Male",
+    "bloodGroup": "O+",
+    "height": "172 cm",
+    "weight": "68 kg",
+    "department": "General Medicine",
+    "date": "2026-06-15",
+    "dateLabel": "15 June",
+    "time": "11:30 AM",
+    "symptoms": [
+      "Fever",
+      "Headache",
+      "Weakness"
+    ],
+    "severity": 8,
+    "status": "pending-review"
+  },
+  {
+    "id": "APT-1002",
+    "patientId": "USR-1002",
+    "patientName": "Ananya Shah",
+    "department": "Cardiology",
+    "date": "2026-06-15",
+    "dateLabel": "15 June",
+    "time": "11:30 AM",
+    "symptoms": [
+      "Cough",
+      "Chest Pain"
+    ],
+    "severity": 9,
+    "status": "pending-review"
+  },
+  {
+    "id": "APT-1003",
+    "patientId": "USR-1003",
+    "patientName": "Rohan Mehta",
+    "department": "Neurology",
+    "date": "2026-06-15",
+    "dateLabel": "15 June",
+    "time": "12:00 PM",
+    "symptoms": [
+      "Body Pain",
+      "Dizziness"
+    ],
+    "severity": 5,
+    "status": "reviewed"
+  }
+]

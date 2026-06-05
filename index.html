@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Care Bridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="guest">
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary">
+        <button class="brand" data-view="role-home" aria-label="Care Bridge home">
+          <span class="brand-mark">+</span>
+          <span>
+            <strong>Care Bridge</strong>
+            <small>OPD pre-visit care</small>
+          </span>
+        </button>
+
+        <nav class="nav-list">
+          <button class="nav-item" data-role="patient" data-view="patient-dashboard" title="Patient dashboard">
+            <span data-icon="user"></span><span>Dashboard</span>
+          </button>
+          <button class="nav-item" data-role="patient" data-view="book-appointment" title="Book appointment">
+            <span data-icon="calendar"></span><span>Book Visit</span>
+          </button>
+          <button class="nav-item" data-role="patient" data-view="symptom-form" title="Symptom form">
+            <span data-icon="pulse"></span><span>Symptoms</span>
+          </button>
+          <button class="nav-item" data-role="patient" data-view="patient-reports" title="Reports">
+            <span data-icon="file"></span><span>Reports</span>
+          </button>
+          <button class="nav-item" data-role="patient" data-view="follow-up" title="Follow-up">
+            <span data-icon="repeat"></span><span>Follow-up</span>
+          </button>
+          <button class="nav-item" data-role="patient" data-view="profile" title="Profile">
+            <span data-icon="user"></span><span>Profile</span>
+          </button>
+          <button class="nav-item" data-role="doctor" data-view="doctor-dashboard" title="Doctor dashboard">
+            <span data-icon="stethoscope"></span><span>Queue</span>
+          </button>
+          <button class="nav-item" data-role="doctor" data-view="patient-detail" title="Patient case">
+            <span data-icon="file"></span><span>Case Review</span>
+          </button>
+          <button class="nav-item" data-role="doctor" data-view="notifications" title="Notifications">
+            <span data-icon="bell"></span><span>Follow-ups</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-note">
+          <span class="status-dot"></span>
+          <p id="portalStatus">Connected to Care Bridge backend dataset.</p>
+          <button class="compact-action stretch logout-button" id="logoutButton" type="button">Logout</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="view active landing" id="landing">
+          <div class="hero">
+            <img src="assets/care-bridge-hero.png" alt="Doctor reviewing a tablet with a patient in a modern clinic">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <p class="eyebrow">Smart OPD pre-visit and follow-up</p>
+              <h1>Care Bridge</h1>
+              <p class="hero-copy">A working OPD system where patients book visits and submit symptoms, while doctors review cases, write notes, and track follow-ups from a separate portal.</p>
+              <div class="hero-actions">
+                <button class="primary-action" data-view="patient-login">Patient Login</button>
+                <button class="secondary-action" data-view="doctor-login">Doctor Login</button>
+                <button class="secondary-action" data-view="register">Register</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats-band">
+            <div><strong>18</strong><span>Appointments today</span></div>
+            <div><strong>6</strong><span>Pending reviews</span></div>
+            <div><strong>4</strong><span>Follow-ups due</span></div>
+            <div><strong>7/10</strong><span>Average severity</span></div>
+          </div>
+        </section>
+
+        <section class="view narrow" id="patient-login">
+          <div class="panel">
+            <p class="eyebrow">Patient portal</p>
+            <h2>Login to manage your visit</h2>
+            <form class="form-grid login-form active" id="patientLoginForm">
+              <label>Mobile Number<input name="mobile" value="9876543210" required></label>
+              <label>Password<input type="password" name="password" value="carebridge" required></label>
+              <button class="primary-action stretch" type="submit">Open Patient Dashboard</button>
+            </form>
+            <p class="form-hint">Demo patient: 9876543210 / carebridge</p>
+          </div>
+        </section>
+
+        <section class="view narrow" id="doctor-login">
+          <div class="panel doctor-login-panel">
+            <p class="eyebrow">Doctor portal</p>
+            <h2>Login to review OPD cases</h2>
+            <form class="form-grid login-form active" id="doctorLoginForm">
+              <label>Doctor ID<input name="doctorId" value="DOC-1001" required></label>
+              <label>Password<input type="password" name="password" value="doctorcare" required></label>
+              <button class="primary-action stretch" type="submit">Open Doctor Queue</button>
+            </form>
+            <p class="form-hint">Demo doctor: DOC-1001 / doctorcare</p>
+          </div>
+        </section>
+
+        <section class="view auth-grid" id="register">
+          <div class="panel">
+            <p class="eyebrow">Patient registration</p>
+            <h2>Create account</h2>
+            <form class="form-grid" id="registerForm">
+              <div class="form-grid two-col">
+                <label>Full Name<input name="name" value="Prajakt Patil" required></label>
+                <label>Profile Image URL<input name="profileImage" value=""></label>
+                <label>Mobile Number<input name="mobile" value="9876543210" required></label>
+                <label>Email<input type="email" name="email" value="prajakt@example.com" required></label>
+                <label>Age<input type="number" name="age" value="21"></label>
+                <label>Gender<select name="gender"><option>Male</option><option>Female</option><option>Other</option></select></label>
+                <label>Date of Birth<input type="date" name="dob" value="2005-02-12"></label>
+                <label>Blood Group<select name="bloodGroup"><option>O+</option><option>A+</option><option>B+</option><option>AB+</option><option>O-</option></select></label>
+                <label>Height<input name="height" value="172 cm"></label>
+                <label>Weight<input name="weight" value="68 kg"></label>
+                <label>Address<input name="address" value="Pune, Maharashtra"></label>
+                <label>Emergency Contact<input name="emergencyContact" value="9876500000"></label>
+                <label>Insurance ID<input name="insuranceId" value="CB-INS-2045"></label>
+                <label>Known Allergies<input name="allergies" value="None"></label>
+                <label>Password<input type="password" name="password" value="carebridge" required></label>
+                <label>Confirm Password<input type="password" name="confirm" value="carebridge" required></label>
+              </div>
+              <label>Known Diseases<textarea name="knownDiseases">None</textarea></label>
+              <button class="primary-action stretch" type="submit">Create Account</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="view dashboard" id="patient-dashboard">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">Patient dashboard</p>
+              <h2>Welcome Prajakt</h2>
+            </div>
+            <button class="primary-action" data-view="book-appointment">Book New Appointment</button>
+          </header>
+          <div class="dashboard-grid">
+            <article class="feature-card wide-card">
+              <span data-icon="calendar"></span>
+              <h3>Upcoming Appointment</h3>
+              <dl>
+                <div><dt>Date</dt><dd>15 June</dd></div>
+                <div><dt>Time</dt><dd>11:30 AM</dd></div>
+                <div><dt>Department</dt><dd>General Medicine</dd></div>
+              </dl>
+            </article>
+            <button class="feature-card" data-view="patient-reports"><span data-icon="file"></span><h3>View Reports</h3><p>Blood report, ECG and prescriptions.</p></button>
+            <button class="feature-card" data-view="follow-up"><span data-icon="repeat"></span><h3>Follow-Up History</h3><p>Recovery notes and doctor review status.</p></button>
+            <button class="feature-card" data-view="profile"><span data-icon="user"></span><h3>Profile</h3><p>Personal details and medical basics.</p></button>
+          </div>
+        </section>
+
+        <section class="view" id="book-appointment">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">Appointment booking</p>
+              <h2>Patient details and slot</h2>
+            </div>
+            <button class="secondary-action" data-view="symptom-form">Next</button>
+          </header>
+          <form class="workflow-grid" id="appointmentForm">
+            <fieldset class="panel">
+              <legend>Personal Details</legend>
+              <div class="form-grid two-col">
+                <label>Name<input name="name" value="Prajakt Patil"></label>
+                <label>Age<input name="age" type="number" value="21"></label>
+                <label>Gender<select name="gender"><option>Male</option><option>Female</option><option>Other</option></select></label>
+                <label>Blood Group<select name="blood"><option>O+</option><option>A+</option><option>B+</option><option>AB+</option><option>O-</option></select></label>
+                <label>Height<input name="height" value="172 cm"></label>
+                <label>Weight<input name="weight" value="68 kg"></label>
+              </div>
+            </fieldset>
+            <fieldset class="panel">
+              <legend>Department Selection</legend>
+              <label class="full-label">Department
+                <select name="department" id="departmentSelect">
+                  <option>General Medicine</option><option>Cardiology</option><option>Orthopedics</option>
+                  <option>Dermatology</option><option>Neurology</option><option>ENT</option>
+                  <option>Pediatrics</option><option>Gynecology</option>
+                </select>
+              </label>
+            </fieldset>
+            <fieldset class="panel">
+              <legend>Appointment Time</legend>
+              <div class="form-grid two-col">
+                <label>Select Date<input type="date" name="date" value="2026-06-15"></label>
+                <label>Time Slot<select name="slot"><option>09:00</option><option>09:30</option><option>10:00</option><option>10:30</option><option selected>11:00</option></select></label>
+              </div>
+              <button class="primary-action stretch" type="submit">Save and Continue</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <section class="view" id="symptom-form">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">Main innovation</p>
+              <h2>Symptom collection form</h2>
+            </div>
+            <button class="primary-action" id="generateSummaryTop">Generate Summary</button>
+          </header>
+          <form class="workflow-grid" id="symptomForm">
+            <fieldset class="panel">
+              <legend>Main Complaint</legend>
+              <div class="check-grid" id="complaints">
+                <label><input type="checkbox" value="Fever" checked> Fever</label>
+                <label><input type="checkbox" value="Cough"> Cough</label>
+                <label><input type="checkbox" value="Cold"> Cold</label>
+                <label><input type="checkbox" value="Headache" checked> Headache</label>
+                <label><input type="checkbox" value="Chest Pain"> Chest Pain</label>
+                <label><input type="checkbox" value="Body Pain"> Body Pain</label>
+                <label><input type="checkbox" value="Vomiting"> Vomiting</label>
+                <label><input type="checkbox" value="Weakness" checked> Weakness</label>
+                <label><input type="checkbox" value="Dizziness"> Dizziness</label>
+                <label><input type="checkbox" value="Other"> Other</label>
+              </div>
+            </fieldset>
+            <fieldset class="panel">
+              <legend>Symptom Details</legend>
+              <div class="form-grid">
+                <label>Duration
+                  <select id="durationInput"><option>Today</option><option>2-3 Days</option><option selected>1 Week</option><option>2 Weeks</option><option>More Than 1 Month</option></select>
+                </label>
+                <label>Severity <strong id="severityValue">7/10</strong>
+                  <input id="severityInput" type="range" min="1" max="10" value="7">
+                </label>
+                <label id="temperatureWrap">Current Temperature
+                  <select id="temperatureInput"><option>Less than 99</option><option>99-100</option><option selected>101-102</option><option>Above 102</option></select>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="panel">
+              <legend>Existing Diseases</legend>
+              <div class="check-grid">
+                <label><input type="checkbox" value="Diabetes"> Diabetes</label>
+                <label><input type="checkbox" value="BP"> BP</label>
+                <label><input type="checkbox" value="Asthma"> Asthma</label>
+                <label><input type="checkbox" value="Heart Disease"> Heart Disease</label>
+                <label><input type="checkbox" value="Thyroid"> Thyroid</label>
+                <label><input type="checkbox" value="None" checked> None</label>
+              </div>
+            </fieldset>
+            <fieldset class="panel">
+              <legend>Medication and Reports</legend>
+              <div class="form-grid">
+                <label>Current Medication
+                  <select id="medicationStatus"><option>No</option><option selected>Yes</option></select>
+                </label>
+                <label id="medicineNameWrap">Medicine Name<input id="medicineName" value="Paracetamol 500 mg"></label>
+                <label>Upload PDF<input id="reportPdf" name="reportPdf" type="file" accept=".pdf"></label>
+                <label>Upload Image<input id="reportImage" name="reportImage" type="file" accept="image/*"></label>
+              </div>
+              <div class="report-types"><span>Prescription</span><span>Blood Report</span><span>ECG</span><span>MRI</span><span>X-Ray</span></div>
+              <button class="primary-action stretch" type="submit">Submit Symptoms</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <section class="view narrow" id="ai-summary">
+          <div class="panel summary-panel">
+            <p class="eyebrow">AI Health Summary</p>
+            <h2>Doctor review required</h2>
+            <div class="summary-list" id="summaryList"></div>
+            <div class="priority-box">
+              <span>Suggested Department</span><strong id="summaryDepartment">General Medicine</strong>
+              <span>Priority</span><strong id="summaryPriority">Medium</strong>
+            </div>
+            <p class="disclaimer">Not a diagnosis. Final assessment must be completed by a doctor.</p>
+            <button class="primary-action stretch" data-view="patient-dashboard">Back to Patient Dashboard</button>
+          </div>
+        </section>
+
+        <section class="view dashboard" id="patient-reports">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">Patient reports</p>
+              <h2>Your uploaded records</h2>
+            </div>
+            <button class="primary-action" data-view="symptom-form">Upload With Symptoms</button>
+          </header>
+          <div class="case-list" id="patientReportsList"></div>
+        </section>
+
+        <section class="view dashboard" id="doctor-dashboard">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">Doctor dashboard</p>
+              <h2>Today's Appointments</h2>
+            </div>
+          </header>
+          <div class="metric-row">
+            <div><span>Total Patients</span><strong>18</strong></div>
+            <div><span>Pending Reviews</span><strong>6</strong></div>
+            <div><span>Follow-Ups</span><strong>4</strong></div>
+          </div>
+          <div class="case-list">
+            <article class="case-card">
+              <div><h3>Prajakt Patil</h3><p>Fever, Headache, Weakness</p></div>
+              <span class="severity-pill">8/10</span>
+              <time>11:00 AM</time>
+              <button class="secondary-action" data-view="patient-detail">Open Case</button>
+            </article>
+            <article class="case-card">
+              <div><h3>Ananya Shah</h3><p>Cough, Chest Pain</p></div>
+              <span class="severity-pill high">9/10</span>
+              <time>11:30 AM</time>
+              <button class="secondary-action" data-view="patient-detail">Open Case</button>
+            </article>
+            <article class="case-card">
+              <div><h3>Rohan Mehta</h3><p>Body Pain, Dizziness</p></div>
+              <span class="severity-pill low">5/10</span>
+              <time>12:00 PM</time>
+              <button class="secondary-action" data-view="patient-detail">Open Case</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="patient-detail">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">Patient details</p>
+              <h2>Prajakt Patil</h2>
+            </div>
+            <button class="primary-action" data-view="doctor-notes">Add Notes</button>
+          </header>
+          <div class="workflow-grid">
+            <article class="panel">
+              <h3>Patient Information</h3>
+              <dl class="info-list">
+                <div><dt>Age</dt><dd>21</dd></div><div><dt>Gender</dt><dd>Male</dd></div>
+                <div><dt>Blood Group</dt><dd>O+</dd></div><div><dt>Phone</dt><dd>9876543210</dd></div>
+              </dl>
+            </article>
+            <article class="panel">
+              <h3>Submitted Symptoms</h3>
+              <p id="doctorSymptoms">Fever, Headache, Weakness</p>
+              <dl class="info-list"><div><dt>Duration</dt><dd id="doctorDuration">1 Week</dd></div><div><dt>Severity</dt><dd id="doctorSeverity">7/10</dd></div></dl>
+            </article>
+            <article class="panel">
+              <h3>Uploaded Reports</h3>
+              <div class="file-list"><button>Blood_Report.pdf</button><button>MRI_Report.pdf</button><button>Prescription.jpg</button></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view narrow" id="doctor-notes">
+          <div class="panel">
+            <p class="eyebrow">Doctor notes</p>
+            <h2>Treatment plan</h2>
+            <form class="form-grid" id="notesForm">
+              <label>Diagnosis<textarea name="diagnosis">Viral fever with headache and weakness. Hydration advised.</textarea></label>
+              <label>Treatment Notes<textarea name="treatmentNotes">Monitor temperature every 6 hours. Return immediately if breathing difficulty or persistent high fever.</textarea></label>
+              <label>Medicine<textarea name="medicine">Paracetamol 500 mg after food, ORS, rest.</textarea></label>
+              <label>Instructions<textarea name="instructions">Drink fluids. Avoid self-medication. Upload CBC report if fever continues.</textarea></label>
+              <label>Follow-Up Needed?
+                <select id="followUpNeeded" name="followUpNeeded"><option selected>Yes</option><option>No</option></select>
+              </label>
+              <label id="followDateWrap">Schedule
+                <select name="followUpAfter"><option>After 3 Days</option><option selected>After 7 Days</option><option>After 15 Days</option><option>Custom Date</option></select>
+              </label>
+              <button class="primary-action stretch" type="submit">Save Notes</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="view narrow" id="follow-up">
+          <div class="panel">
+            <p class="eyebrow">Patient follow-up</p>
+            <h2>How are you feeling?</h2>
+            <form class="form-grid" id="followForm">
+              <div class="segmented">
+                <label><input type="radio" name="feeling" value="Better" checked> Better</label>
+                <label><input type="radio" name="feeling" value="Same"> Same</label>
+                <label><input type="radio" name="feeling" value="Worse"> Worse</label>
+              </div>
+              <label>Recovery Percentage <strong id="recoveryValue">70%</strong>
+                <input id="recoveryInput" type="range" min="0" max="100" value="70">
+              </label>
+              <div class="check-grid">
+                <label><input type="checkbox" name="symptomsRemaining" value="Fever" checked> Fever</label>
+                <label><input type="checkbox" name="symptomsRemaining" value="Headache" checked> Headache</label>
+                <label><input type="checkbox" name="symptomsRemaining" value="Cough"> Cough</label>
+                <label><input type="checkbox" name="symptomsRemaining" value="Weakness" checked> Weakness</label>
+              </div>
+              <label>Medicine Completed
+                <select name="medicineCompleted"><option selected>Yes</option><option>No</option></select>
+              </label>
+              <label>Additional Comments<textarea name="comments" placeholder="Type here...">Mild headache remains in the evening.</textarea></label>
+              <button class="primary-action stretch" type="submit">Submit Follow-Up</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="view dashboard" id="notifications">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">Doctor follow-up dashboard</p>
+              <h2>Notifications and reviews</h2>
+            </div>
+          </header>
+          <div class="case-list">
+            <article class="case-card">
+              <div><h3>Prajakt Patil</h3><p>Recovery: 70% - Improving - Mild headache</p></div>
+              <button class="secondary-action" data-view="patient-detail">Review</button>
+            </article>
+            <article class="case-card">
+              <div><h3>Ananya Shah</h3><p>Follow-up due today - Symptoms same</p></div>
+              <button class="secondary-action" data-view="patient-detail">Review</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="view narrow" id="profile">
+          <div class="panel profile-panel">
+            <div class="profile-header">
+              <img id="profileImage" src="assets/patient-avatar.svg" alt="Patient profile">
+              <div>
+                <p class="eyebrow">Patient profile</p>
+                <h2>Prajakt Patil</h2>
+                <p id="profileSummary">Complete patient record connected to backend data.</p>
+              </div>
+            </div>
+            <h3>Basic Information</h3>
+            <dl class="info-list profile-info" id="profileBasic"></dl>
+            <h3>Medical Information</h3>
+            <dl class="info-list profile-info" id="profileMedical"></dl>
+            <h3>Contact and Coverage</h3>
+            <dl class="info-list profile-info" id="profileContact"></dl>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

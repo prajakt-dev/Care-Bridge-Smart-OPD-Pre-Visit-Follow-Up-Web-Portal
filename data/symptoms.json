@@ -1,0 +1,32 @@
+[
+  {
+    "id": "SYM-1780475338494",
+    "appointmentId": "APT-1001",
+    "patientId": "USR-1001",
+    "symptoms": [
+      "Fever",
+      "Headache",
+      "Weakness"
+    ],
+    "duration": "1 Week",
+    "severity": 5,
+    "suggestedDepartment": "General Medicine",
+    "priority": "Medium",
+    "warning": "Not a diagnosis. Doctor review required.",
+    "createdAt": "2026-06-03T08:28:58.494Z"
+  },
+  {
+    "id": "SYM-1001",
+    "symptoms": [
+      "Fever",
+      "Headache",
+      "Weakness"
+    ],
+    "duration": "1 Week",
+    "severity": 8,
+    "temperature": "101-102",
+    "suggestedDepartment": "General Medicine",
+    "priority": "High",
+    "createdAt": "2026-05-31T08:30:00.000Z"
+  }
+]

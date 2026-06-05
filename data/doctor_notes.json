@@ -1,0 +1,12 @@
+[
+  {
+    "id": "NOTE-1001",
+    "appointmentId": "APT-1001",
+    "diagnosis": "Viral fever with headache and weakness",
+    "treatmentNotes": "Monitor temperature every 6 hours. Maintain hydration.",
+    "medicine": "Paracetamol 500 mg after food",
+    "instructions": "Upload CBC report if fever continues.",
+    "followUpNeeded": true,
+    "followUpAfter": "After 7 Days"
+  }
+]

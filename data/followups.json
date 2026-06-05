@@ -1,0 +1,38 @@
+[
+  {
+    "id": "FUP-1780475402051",
+    "patientName": "Prajakt Patil",
+    "recovery": 70,
+    "status": "Improving",
+    "feeling": "Better",
+    "symptomsRemaining": [
+      "Fever",
+      "Headache",
+      "Weakness"
+    ],
+    "medicineCompleted": true,
+    "comments": "Mild headache remains in the evening.",
+    "createdAt": "2026-06-03T08:30:02.052Z"
+  },
+  {
+    "id": "FUP-1001",
+    "patientName": "Prajakt Patil",
+    "recovery": 70,
+    "status": "Improving",
+    "symptomsRemaining": [
+      "Mild Headache"
+    ],
+    "medicineCompleted": true
+  },
+  {
+    "id": "FUP-1002",
+    "patientName": "Ananya Shah",
+    "recovery": 45,
+    "status": "Needs Review",
+    "symptomsRemaining": [
+      "Cough",
+      "Chest Pain"
+    ],
+    "medicineCompleted": false
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "REP-1001",
+    "patientId": "USR-1001",
+    "name": "Blood_Report.pdf",
+    "type": "Blood Report"
+  },
+  {
+    "id": "REP-1002",
+    "patientId": "USR-1001",
+    "name": "MRI_Report.pdf",
+    "type": "MRI"
+  },
+  {
+    "id": "REP-1003",
+    "patientId": "USR-1001",
+    "name": "Prescription.jpg",
+    "type": "Prescription"
+  }
+]

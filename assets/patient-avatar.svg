@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Patient avatar">
+  <rect width="180" height="180" rx="24" fill="#e9f6f4"/>
+  <circle cx="90" cy="70" r="34" fill="#087f85"/>
+  <path d="M38 154c6-34 25-52 52-52s46 18 52 52" fill="#5da271"/>
+  <circle cx="78" cy="66" r="5" fill="#fff"/>
+  <circle cx="102" cy="66" r="5" fill="#fff"/>
+  <path d="M76 84c9 8 19 8 28 0" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+</svg>

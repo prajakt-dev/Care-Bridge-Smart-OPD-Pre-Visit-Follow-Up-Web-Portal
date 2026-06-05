@@ -1,0 +1,20 @@
+[
+  {
+    "id": "NOT-1780475402059",
+    "role": "doctor",
+    "message": "Prajakt Patil submitted a follow-up response: Improving.",
+    "status": "unread"
+  },
+  {
+    "id": "NOT-1001",
+    "role": "doctor",
+    "message": "Prajakt Patil submitted a follow-up response.",
+    "status": "unread"
+  },
+  {
+    "id": "NOT-1002",
+    "role": "patient",
+    "message": "Your follow-up is scheduled after 7 days.",
+    "status": "read"
+  }
+]

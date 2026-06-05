@@ -1,0 +1,18 @@
+{
+  "name": "care-bridge",
+  "version": "1.0.0",
+  "description": "Full-stack Care Bridge OPD pre-visit and follow-up demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node -e \"const fs=require('fs'); new Function(fs.readFileSync('app.js','utf8')); console.log('frontend syntax ok')\""
+  },
+  "keywords": [
+    "healthcare",
+    "opd",
+    "full-stack"
+  ],
+  "author": "",
+  "license": "MIT"
+}
