@@ -1,3 +1,5 @@
+Screenshot 2026-06-05 192936.png
+
 # CareBridge – Smart OPD Pre-Visit & Follow-Up Web Portal
 
 CareBridge is a healthcare web application designed to improve communication between patients and healthcare providers before and after OPD visits.
